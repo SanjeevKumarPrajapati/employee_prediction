@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Prediction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family:Lucida Handwriting;
+}
+.section-title h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5f5950;
+}
+.section-title h2 span {
+  color: #ffb03b;
+}
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 300;
+}
+</style>
+</head>
+<body>
+<div class="section-title">
+<h2>Employee Prediction<span> System</span></h2>
+<p style="font-family:Arial"><b><i>"This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage”</i></b></p>
+</div>
+<center>
+<div class="container">
+  <form action="/" method="post">
+  <div class="row">
+      <div class="col-25">
+        <label for="lname"><b>Your Name</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" style="height:42px;width:100%;" id="lname" name="your_name" placeholder="Enter Your Name ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname"><b>Phone Number</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" style="height:42px;width:100%;" id="lname" name="phone_number" placeholder="Enter Your Phone Number ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname"><b>Apply For Department</b></label>
+		<select name="dept" id="lname">
+		<option>Computer Science</option>
+		<option>Mechanical</option>
+		<option>Electrical</option>
+		<option>Applied Science</option>
+		<option>Management</option>
+		</select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><b>Number of year you have worked in current organization</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="fname" name="number_of_year" placeholder="Number of year you have worked in current organization ..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Highest number of years you have worked in any organization</b></label>
+      </div>
+      <div class="col-75">
+	  <br>
+        <input type="number" id="lname" style="height:42px;width:100%;" name="higest_number_of_year" placeholder="Highest number of years you have worked in any organization ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Experience in year ( Teaching )</b></label>
+      </div>
+      <div class="col-75">
+	  <br>
+        <input type="number" id="lname" style="height:42px;width:100%;" name="experience_in_year_teaching" placeholder="Experience in year ( Teaching ) ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Experience in year ( Industry )</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" id="lname" style="height:42px;width:100%;" name="experience_in_year_industry" placeholder="Experience in year ( Industry )..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>10th percentage</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;"  id="lname" name="tenth_percentage" placeholder="10th percentage..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>12th percentage</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="twelveth_percentage" placeholder="12th percentage..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Graduation percentage</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="graduation_percentage" placeholder="Graduation percentage..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Post  Graduation percentage</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="post_graduate_percentage" placeholder="Post  Graduation percentage ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Doctoral percentage</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="doctoral_percentage" placeholder="Doctoral percentage ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Worked on any project(technical or non-technical) ( 0 for no and 1 for yes )</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="worked_on_any_project" placeholder="Worked on any project(technical or non-technical) ( 0 for no and 1 for yes ) ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many projects you have completed successfully(technical or non-technical) </b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="how_many_project" placeholder="How many projects you have completed successfully(technical or non-technical)  ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many years, you lived outside your house</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="how_many_years" placeholder="How many years, you lived outside your house ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Participated any group discussion(City, State, National or international level) ( 0 for no and 1 for yes)</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="group_discussion" placeholder="Participated any group discussion(City, State, National or international level) ( 0 for no and 1 for yes ) ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Can you became a team leader? ( 0 for no and 1 for yes )</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="team_leader" placeholder="Can you became a team leader? ( 0 for no and 1 for yes ) ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many hours you read books per day</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="read_books" placeholder="How many hours you read books per day ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many friends you have</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="how_many_friends" placeholder="How many friends you have ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many members of your family depends on you ( financially )</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" id="lname" style="height:42px;width:100%;" name="how_many_members" placeholder="How many members of your family depends on you ( financially )..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Tell us count of phone numbers you have saved in your mobile</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="phone_number" placeholder="Tell us count of phone numbers you have saved in your mobile ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many states you have travelled in India</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="states_you_have" placeholder="How many states you have travelled in India ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many countries you have visited</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="countries_you_have" placeholder="How many countries you have visited ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many students you have guided</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" id="lname" style="height:42px;width:100%;" name="how_many_students" placeholder="How many students you have guided ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many research papers you have published</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number"style="height:42px;width:100%;" id="lname" name="how_many_research" placeholder="How many research papers you have published ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many conferences you have attend</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="how_many_conferences" placeholder="How many conferences you have attend ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Can you think feedback is necessary against you. ( 0 for no and 1 for yes )</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="feedback" placeholder="Can you think feedback is necessary against you. ( 0 for no and 1 for yes ) ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>Numbers of times in day, you think about your family</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="think_about_your_family" placeholder="Numbers of times in day, you think about your family ..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25"><br>
+        <label for="lname"><b>How many games you have in your phone</b></label>
+      </div>
+      <div class="col-75"><br>
+        <input type="number" style="height:42px;width:100%;" id="lname" name="how_many_games" placeholder="How many games you have in your phone ..">
+	  </div>
+    </div>
+    <div class="row"><br>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</center>
+</body>
+</html>
